@@ -7,7 +7,7 @@ Aqui compartilho meu aprendizado, explorando os conceitos fundamentais, boas pr�
 
 Este repositório serve como um registro da minha jornada estudando e aplicando **React.js**, documentando conhecimentos adquiridos e desafios enfrentados. Além disso, é um espaço para que recrutadores e colaboradores possam ver meu envolvimento com essa tecnologia.
 
-Embora o projeto utilize Next.js para facilitar a estruturação, o foco principal é explorar e registrar os fundamentos do React.js, incluindo seus principais conceitos e Hooks, "mais especificamente o os hooks".
+Embora o projeto utilize Next.js para facilitar a estruturação, o foco principal é explorar e registrar os fundamentos do React.js, incluindo seus principais conceitos e Hooks, "mais especificamente os hooks".
 
 ## 📂 O que você encontrará aqui?
 
