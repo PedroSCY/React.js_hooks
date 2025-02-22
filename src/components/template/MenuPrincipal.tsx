@@ -4,56 +4,16 @@ import Logo from "./Logo";
 import MenuPrincipalItem from "./MenuPrincipalItem";
 import MenuPrincipalSecao from "./MenuPrincipalSecao";
 import Flex from "./Flex";
-import { IconAppWindow, IconArrowsLeftRight, IconDimensions, IconLetterCase, IconLock, IconMathGreater, IconMenu, IconNumbers, IconRefreshAlert, IconSection, IconShoppingCart, IconUsers, IconX } from "@tabler/icons-react";
-import useTamanhoJanela from "@/data/hooks/useTamanhoJanela";
-import { useEffect } from "react";
-import useBoolean from "@/data/hooks/useBoolean";
+import { IconMenu, IconX } from "@tabler/icons-react";
+import useMenu from "@/data/hooks/useMenu";
 
 export default function MenuPrincipal() {
-    const secoes = [
-        {
-            titulo: "Essenciais",
-            aberta: false,
-            itens: [{titulo: "Contador",tag: "useState",url: "/essenciais/contador",icone:<IconNumbers />},
-            {titulo:"Votação", url:"/essenciais/votacao", tag:"useState", icone:<IconUsers/>},
-            {titulo:"Consulta à API", url:"/essenciais/consultaAPI", tag:"useEffect", icone: <IconArrowsLeftRight/>},
-            {titulo:"Maior", url:"/essenciais/maior", tag:"useEffect", icone:<IconMathGreater/>},
-            {titulo:"Contagem Caracteres", url:"/essenciais/contagemCaracteresEffect", tag:"useEffect", icone:<IconLetterCase/>},
-            {titulo:"State VS Referencia", url:"/essenciais/stateVsRef", tag:"useRef",icone:<IconRefreshAlert/>},
-            {titulo:"Referenciando Elemento", url:"/essenciais/refElemento", tag:"useRef", icone:<IconSection/>},
-            {titulo:"Contagem Caracteres", url:"/essenciais/contagemCaracteresRef", tag:"useRef", icone: <IconLetterCase/>}],
-        },
-        {
-            titulo: "Personalizados",
-            aberta: false,
-            itens: [{titulo:"Modal", url:"/personalizados/modal", tag:"personalizados", icone:<IconAppWindow/>},
-                {titulo:"Tamanho Janela", url:"/personalizados/tamanhoJanela", tag:"personalizados", icone: <IconDimensions/>},
-                {titulo:"Validando Senha", url:"/personalizados/senha", tag:"personalizados", icone:<IconLock/>}]
-        },
-        {
-            titulo:"Contexto",
-            aberta: true,
-            itens: [
-                {titulo:"Loja", url:"/contexto/loja", tag:"useContext", icone:<IconShoppingCart/>},
-                
-            ]
-        },
-    ];
-    const [mini, toggleMini, miniTrue, miniFalse]  = useBoolean(false);
-    let tamanho = useTamanhoJanela();
-
-    useEffect(() => {
-        if(tamanho === "md" || tamanho === "sm" || tamanho === "xs") {
-            miniTrue();
-        } else {
-            miniFalse();
-        }
-    }, [tamanho]);
-
+    
+    const {secoes, mini, toggleMini, alternarSecao} = useMenu()
 
     function renderizarSecoes() {
         return secoes.map((secao: MenuSecao) => (
-            <MenuPrincipalSecao key={secao.titulo} titulo={secao.titulo} mini={mini} aberta={secao.aberta}>
+            <MenuPrincipalSecao key={secao.titulo} titulo={secao.titulo} mini={mini} aberta={secao.aberta} onClick={() => alternarSecao(secao)}>
                 {renderizarItens(secao)}
             </MenuPrincipalSecao>
         ));
@@ -68,6 +28,7 @@ export default function MenuPrincipal() {
                 tag={item.tag}
                 url={item.url}
                 mini={mini}
+                selecionado={item.selecionado}
             />
         ));
     }
