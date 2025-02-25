@@ -1,4 +1,4 @@
-import { IconAppWindow, IconArrowsLeftRight, IconDimensions, IconLetterCase, IconLock, IconMathGreater, IconNumbers, IconRefreshAlert, IconSection, IconShoppingCart, IconUsers } from "@tabler/icons-react";
+import { IconAppWindow, IconArrowsLeftRight, IconColorSwatch, IconDatabase, IconDatabaseImport, IconDimensions, IconForms, IconLetterCase, IconLock, IconMathGreater, IconNumbers, IconPin, IconRefreshAlert, IconSection, IconShoppingCart, IconTextColor, IconUsers } from "@tabler/icons-react";
 
 export const secoes = [
         {
@@ -28,6 +28,21 @@ export const secoes = [
                 
             ]
         },
+        {
+            titulo:"Outros",
+            aberta: true,
+            itens: [
+                {titulo:"Memoizando elementos", url:"/outros/memoizacao", tag:"useMemo", icone:<IconPin/>},
+                {titulo:"Memoizando funções", url:"/outros/memoizandoFuncoes", tag:"useCallback", icone:<IconPin/>},
+                {titulo:"Formulario 1", url:"/outros/formularioImperativeHandle", tag:"useImperativeHandle", icone:<IconForms/>},
+                {titulo:"Texto secreto", url:"/outros/texto", tag:"useLayoutEffect", icone:<IconTextColor/>},
+                {titulo:"Gerador de Cor", url:"/outros/geradorDeCor", tag:"useLayoutEffect",icone: <IconColorSwatch/>},
+                {titulo:"Soma com useState", url:"/outros/somaState", tag:"useState", icone:<IconDatabase/>},
+                {titulo:"Soma com useReducer", url:"/outros/somaReducer", tag:"useReducer", icone:<IconDatabaseImport/>},
+                {titulo:"Formulario 1", url:"/outros/formularioId1", tag:"useId", icone:<IconForms/>},
+                {titulo: "Formulario 2", url:"/outros/formularioId2", tag: "useId", icone:<IconForms/>}           
+            ]
+        }
     ];
 
     export default secoes
