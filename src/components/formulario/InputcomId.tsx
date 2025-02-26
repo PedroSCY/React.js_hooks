@@ -1,6 +1,6 @@
 import Flex from "../template/Flex";
 import { useId } from "react";
-export default function InputComId(props) {
+export default function InputComId(props:{label:string}) {
     const id = useId();
     return (
         <Flex center>
