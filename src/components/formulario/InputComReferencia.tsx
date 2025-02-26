@@ -3,11 +3,10 @@ import { forwardRef, useImperativeHandle, useRef } from "react";
 interface InputFormatadoProps {
     label?: string;
     tipo: string;
-    className?: string,
-    ref: any
+    className?: string
 }
 
-function InputComReferencia(props: InputFormatadoProps, ref) {
+function InputComReferencia(props: InputFormatadoProps, ref:any) {
     const referenciaInterna = useRef<any>();
 
     function novasFuncionalidades(){
