@@ -9,6 +9,11 @@ Este repositório serve como um registro da minha jornada estudando e aplicando 
 
 Embora o projeto utilize Next.js para facilitar a estruturação, o foco principal é explorar e registrar os fundamentos do React.js, incluindo seus principais conceitos e Hooks, "mais especificamente os hooks".
 
+## 🌎 Demonstração
+
+Você pode visualizar o projeto em funcionamento acessando:  
+🔗 **[react-js-eta-rouge.vercel.app](https://react-js-eta-rouge.vercel.app)**  
+
 ## 📂 O que você encontrará aqui?
 
 ✔️ Fundamentos do React.js e sua abordagem declarativa  
