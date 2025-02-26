@@ -5,7 +5,7 @@ import InputFormatado from "../../components/formulario/InputFormatado";
 import Botao from "../../components/template/Botao";
 import { useReducer,Reducer } from "react";
 
-function mudaDados(estadoAtual, acao) {
+function mudaDados(estadoAtual: any, acao: any) {
     switch (acao.type) {
         case "ALTERA_N1":
             return { ...estadoAtual, n1: acao.novoValor, validadeN1: acao.novoValor > 0 };
