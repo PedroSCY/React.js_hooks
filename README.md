@@ -12,7 +12,7 @@ Embora o projeto utilize Next.js para facilitar a estruturação, o foco princip
 ## 🌎 Demonstração
 
 Você pode visualizar o projeto em funcionamento acessando:  
-🔗 **[react-js-state-management.vercel.app](https://react-js-state-management.vercel.app)**  
+🔗 **[react-js-eta-rouge.vercel.app](https://react-js-eta-rouge.vercel.app)**
 
 ## 📂 O que você encontrará aqui?
 
